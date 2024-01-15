@@ -1,12 +1,12 @@
 import React from "react";
 
 const MovieList = (props) => {
-    const { movies, handleFavouritesClick } = props;
+    const { movies, handleFavouritesClick, favourite } = props;
 
     if (!movies) {
       return <p>No movies available.</p>;
     }
-    const Favourite = props.favourite
+    const Favourite = favourite
     return(
         <>
         {props.movies.map((movie, index) => 

@@ -37,10 +37,11 @@ const App = () => {
   };
 
   const addFavourite = (movie) => {
-    const newFavouriteList = [...favourite, movie];
+    const initialFavourite = favourite || [];
+    const newFavouriteList = initialFavourite.concat(movie);
     setFavourite(newFavouriteList);
     saveToLocalStorage(newFavouriteList);
-  };
+};
 
   const removeFavourite = (movie) => {
     const newFavouriteList = favourite.filter(
